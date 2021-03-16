@@ -72,24 +72,38 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
-var arrayDePalabras=str.split(' ');
+
+var strArr=str.split(' ');
 function palabraReves (palabra) {
   var newPalabra='';
   for (var i = palabra.length-1; i>= 0; i--) {
     newPalabra=newPalabra+palabra[i];
     }
     return newPalabra;
+  }
+var strArrMirror=strArr.map(palabraReves);
+return strArrMirror.join(' ')
+
 }
-var arrayAlReves=[];
-for (var i = 0; i < arrayDePalabras.length; i++) {
-  arrayAlReves[i]=palabraReves(arrayDePalabras[i]);
-}
-var rta='';
-for (var i = 0; i < arrayAlReves.length; i++) {
-  rta=rta+arrayAlReves[i]+' ';
-}
-return rta.slice(0,(rta.length-1));
-}
+
+// var arrayDePalabras=str.split(' ');
+// function palabraReves (palabra) {
+//   var newPalabra='';
+//   for (var i = palabra.length-1; i>= 0; i--) {
+//     newPalabra=newPalabra+palabra[i];
+//     }
+//     return newPalabra;
+// }
+// var arrayAlReves=[];
+// for (var i = 0; i < arrayDePalabras.length; i++) {
+//   arrayAlReves[i]=palabraReves(arrayDePalabras[i]);
+// }
+// var rta='';
+// for (var i = 0; i < arrayAlReves.length; i++) {
+//   rta=rta+arrayAlReves[i]+' ';
+// }
+// return rta.slice(0,(rta.length-1));
+// }
 
 
 function capicua(numero){
